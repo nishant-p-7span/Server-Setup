@@ -185,3 +185,22 @@ If this Deployment Succeded then Good to Go for Pipeline otherwise try to solve 
 Create New Pipeline --> Pipeline Name --> Create service Role --> Source Provider: GitHub - V1, Connect it then select repo and branch, Detection option AWS CodePipeline --> Skip Build Stage --> Deploy Stage: Select CodeDeploy, application and deployment Group. --> Create Pipeline.
 
 # Now Done, if you make chages to the git repo then automatically trigger the pipeline and deploy it.
+
+# NPM hangs problem on t2.micro.
+
+We will Solve this issue by Allocating our ebs storage as memory, so it will increase our RAM.
+
+first make sure you are log in as root ( so our swap file be stay persistant on the reboots ).
+
+    sudo su #if you are log in as ubuntu user.
+
+Copy Paste the following commands.
+
+    fallocate -l 4G /swapfile
+    chmod 600 /swapfile
+    mkswap  /swapfile
+    swapon /swapfile
+    swapon  --show
+    free -h
+
+    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
