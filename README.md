@@ -204,5 +204,5 @@ Copy Paste the following commands.
     free -h
 
     echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-
-```sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com```
+- Certbot.
+    ```sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com```
