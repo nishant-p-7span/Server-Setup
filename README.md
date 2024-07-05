@@ -125,10 +125,14 @@ Copy Paste the following commands.
 
 # NGINX Setup:
 - install nginx
-  ```sudo apt install nginx```
+  ```
+  sudo apt install nginx
+  ```
 - Go to folowing location: `etc/nginx/site-available`.
 - Create file with domain name of app
-  ```nano domain.com```
+  ```
+  nano domain.com
+  ```
 - Add following content to the file:
   ```
   server {
@@ -152,21 +156,33 @@ Copy Paste the following commands.
     }
    ```
 - Enter following command to link to the `sites-enable`.
-  ```sudo ln -s /etc/nginx/sites-available/domain.com /etc/nginx/sites-enabled/```
+  ```
+  sudo ln -s /etc/nginx/sites-available/domain.com /etc/nginx/sites-enabled/
+  ```
 - Configuration check command:
-  ```nginx -t```
+  ```
+  nginx -t
+  ```
 - Reload NGINX:
-  ```nginx -s reload```
+  ```
+  nginx -s reload
+  ```
 
 # Certbot Set up:
 - add repo:
-  ```sudo add-apt-repository ppa:certbot/certbot```
+  ```
+  sudo add-apt-repository ppa:certbot/certbot
+  ```
 - update:
-  ```sudo apt-get update```
+  ```
+  sudo apt-get update
+  ```
 - install certbot:
-  ```sudo apt-get install python3-certbot-nginx```
+  ```
+  sudo apt-get install python3-certbot-nginx
+  ```
 - Command to activate SSL.
     ```
-      sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com
+    sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com
     ```
 
