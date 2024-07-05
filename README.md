@@ -194,3 +194,16 @@ Copy Paste the following commands.
     sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com
     ```
 
+# Directus Commands:
+- Initiate directus project:
+  ```
+  npm init directus-project@latest <project-name>
+  ```
+- Start new project.
+  ```
+  npx directus start
+  ```
+- If database already exist or set up project from already existing env.
+  ```
+  npx directus bootstrap
+  ```
