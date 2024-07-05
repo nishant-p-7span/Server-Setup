@@ -34,12 +34,12 @@
       FLUSH PRIVILEGES;
       EXIT;
       ```
-    ## mysql basic commands.
-    - status of mysql service.
-      ```
-      systemctl status mysql.service
-      ```
-    - restart service. (Run this after changing bind-addresses)
-      ```
-      sudo service mysql restart
-      ```
+  ## mysql basic commands.
+  - status of mysql service.
+    ```
+    systemctl status mysql.service
+    ```
+  - restart service. (Run this after changing bind-addresses)
+    ```
+    sudo service mysql restart
+    ```
