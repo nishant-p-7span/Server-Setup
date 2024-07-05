@@ -1,6 +1,4 @@
-# AWS CodeDeploy and CodePipeline on EC2 instance with github.
-In this section, We are going to create CI/CD pipeline using AWS CodeDeploy and CodePipeline on EC2 instance. Before, going into the further process make sure your git repo is set up with appsec.yml file properly as I have done.
-
+# AWS Server set up guide.
 ## **Setup EC2 Instace:**
 **1. Launch EC2 instance:** Here I am going to use Ubuntu, so next all the commands will be according to the ubuntu.
 
@@ -9,7 +7,7 @@ In this section, We are going to create CI/CD pipeline using AWS CodeDeploy and 
 **3. Update, upgrade and Install git, htop and wget:**
 
 Update:
-    
+
     sudo apt update
 
 Upgrade:
@@ -166,6 +164,16 @@ Copy Paste the following commands.
 - Reload NGINX:
   ```
   nginx -s reload
+  ```
+- NGINX parameter to limit file upload size.
+  ```
+  client_max_body_size 100M;
+  ```
+- NGINX wildcard parameter to query other routes.
+  ```
+  location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
   ```
 
 # Certbot Set up:
