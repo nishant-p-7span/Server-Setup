@@ -43,3 +43,9 @@
     ```
     sudo service mysql restart
     ```
+  ## Import MySQL dump using CLI:
+  - add .sql dump using cli.
+    ```
+    mysql -u username -p database_name < file.sql
+    ```
+  - Other trick is import it from Tableplus.
