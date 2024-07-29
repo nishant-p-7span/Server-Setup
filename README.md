@@ -193,6 +193,10 @@ Copy Paste the following commands.
     ```
     sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com
     ```
+- Renew Command:
+  ```
+  certbot renew --dry-run
+  ```
 
 # Directus Commands:
 - Initiate directus project:
