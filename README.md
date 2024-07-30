@@ -219,3 +219,13 @@ Copy Paste the following commands.
   ```
   npx directus bootstrap
   ```
+
+# Python Commands:
+- Python Run program:
+  ```
+  python3 program.py
+  ```
+- Install libraries:
+  ```
+  sudo apt install python3-boto3
+  ```
