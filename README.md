@@ -197,7 +197,15 @@ Copy Paste the following commands.
   ```
   certbot renew --dry-run
   ```
-
+- Set up Cron to auto update SSL:
+  ```
+  crontab -e
+  ```
+- Add certbot command:
+  ```
+  0 12 * * * /usr/bin/certbot renew --quiet
+  ```
+  
 # Directus Commands:
 - Initiate directus project:
   ```
