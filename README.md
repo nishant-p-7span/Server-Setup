@@ -209,6 +209,11 @@ Copy Paste the following commands.
   ```
   0 12 * * * /usr/bin/certbot renew --quiet
   ```
+  Start cron:
+  ```
+  sudo systemctl enable cron
+  sudo systemctl start cron
+  ```
   
 # Directus Commands:
 - Initiate directus project:
