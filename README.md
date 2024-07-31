@@ -193,6 +193,10 @@ Copy Paste the following commands.
     ```
     sudo certbot --nginx --register-unsafely-without-email -d yourdomain.com
     ```
+- Command to check all certiifcates details:
+  ```
+  sudo certbot certificates
+  ```
 - Renew Command:
   ```
   certbot renew --dry-run
