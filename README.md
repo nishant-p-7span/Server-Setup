@@ -175,6 +175,14 @@ Copy Paste the following commands.
         try_files $uri $uri/ /index.php?$query_string;
     }
   ```
+- **Proxy Pass to another URL**: Let's Assume you have frontend that makes calls to the api url but you don't want to reveal direct url of api. then you set proxy pass.
+  ```
+      location /api {
+        proxy_pass https://dev-api.pfizer.invoicing.csmgroup.com;
+        # Add other proxy settings if necessary
+    }
+  ```
+  - Server name is `domain.com`, so if we pass `domain.com/api` then it will redirect to the `https://dev-api.pfizer.invoicing.csmgroup.com`.
 
 # Certbot Set up:
 - add repo:
