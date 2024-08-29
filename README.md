@@ -240,6 +240,15 @@ Copy Paste the following commands.
   ```
   MAX_PAYLOAD_SIZE="100mb"
   ```
+# Durectus with custom version:
+- Install:
+  ```
+  npm i directus@10.10.7
+  ```
+- Init:
+  ```
+  npx directus init
+  ```
 
 # Python Commands:
 - Python Run program:
