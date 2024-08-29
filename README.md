@@ -236,6 +236,10 @@ Copy Paste the following commands.
   ```
   npx directus bootstrap
   ```
+- Add this line to all directus env:
+  ```
+  MAX_PAYLOAD_SIZE="100mb"
+  ```
 
 # Python Commands:
 - Python Run program:
