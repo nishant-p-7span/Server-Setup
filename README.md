@@ -72,7 +72,7 @@ To acces the application go to the following address:
 
 **6. PM2 set up:**
 
-    npm i -g pm2
+    wget -qO- https://getpm2.com/install.sh | bash
 
 **7. Making Available node, pm2 and npm to root:**
 
