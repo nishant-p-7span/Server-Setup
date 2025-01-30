@@ -259,3 +259,28 @@ Copy Paste the following commands.
   ```
   sudo apt install python3-boto3
   ```
+
+# Install Custom SSL Certificates:
+- Follow this document to set certificate: https://phoenixnap.com/kb/install-ssl-certificate-nginx
+- Make you nginx files like this:
+```
+server {
+listen 443;
+ssl_certificate /etc/ssl/ssl-bundle.crt;
+ssl_certificate_key /path/to/your_private.key;
+root /path/to/webroot;
+server_name your_domain.com;
+}
+access_log /var/log/nginx/nginx.vhost.access.log;
+error_log /var/log/nginx/nginx.vhost.error.log;
+location / {
+root /var/www/;
+root  /home/www/public_html/your.domain.com/public/;
+index index.html;
+}
+}
+```
+- Restart nginx: 
+```
+sudo systemctl restart nginx
+```
