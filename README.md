@@ -100,7 +100,28 @@ Save the app, otherwise pm2 will forget running app on next boot:
 Start PM2 on system boot:
 
     sudo pm2 startup
-
+**9. Install Docker:**
+- Curl the Script:
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+```
+- Run the script:
+```
+sudo sh get-docker.sh
+```
+**Make it non root:**
+- Create group if not exit:
+```
+sudo groupadd docker
+```
+- Add your user to group:
+```
+sudo usermod -aG docker $USER
+```
+- Apply chnages:
+```
+newgrp docker
+```
 # Now Done, if you make chages to the git repo then automatically trigger the pipeline and deploy it.
 
 # NPM hangs problem on t2.micro.
