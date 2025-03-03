@@ -206,6 +206,7 @@ Copy Paste the following commands.
   - Server name is `domain.com`, so if we pass `domain.com/api` then it will redirect to the `https://dev-api.pfizer.invoicing.csmgroup.com`.
 
 # Certbot Set up:
+- Original Website docs: https://certbot.eff.org/instructions?ws=nginx&os=snap&tab=standard
 - add repo:
   ```
   sudo add-apt-repository ppa:certbot/certbot
