@@ -229,7 +229,8 @@ Copy Paste the following commands.
   ```
 - Renew Command:
   ```
-  certbot renew --dry-run
+  sudo certbot renew --cert-name yourdomain.com --nginx
+  sudo certbot renew --cert-name yourdomain.com --apache
   ```
 - Set up Cron to auto update SSL:
   ```
