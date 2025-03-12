@@ -309,3 +309,28 @@ index index.html;
 ```
 sudo systemctl restart nginx
 ```
+## Basic Git Commands for server:
+- create new branch new branch:
+```
+git checkout -b <branch-name>
+```
+- Stage all changes:
+```
+git add .
+```
+- Commit:
+```
+git commit -m "message"
+```
+- Push:
+```
+git push origin branch
+```
+- Remove all changes:
+```
+git stash
+```
+- View the branch name:
+```
+git branch
+```
