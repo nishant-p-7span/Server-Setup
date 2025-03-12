@@ -162,6 +162,8 @@ Copy Paste the following commands.
         index index.html index.htm index.nginx-debian.html;
 
         server_name your_domain;
+  
+        client_max_body_size 100M;
 
         location / {
                 # try_files $uri $uri/ =404;
