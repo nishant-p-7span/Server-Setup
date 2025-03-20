@@ -334,3 +334,27 @@ git stash
 ```
 git branch
 ```
+
+## Create user Set password and set up password based authentication.
+- Create new User:
+```
+sudo adduser newuser
+```
+- Set up Password for the user:
+```
+sudo passwd
+```
+- Enable password based authentication:
+    - Edit ssh file:
+    ```
+    sudo nano /etc/ssh/sshd_config
+    ```
+    - Add or enable following variables:
+    ```
+    PasswordAuthentication yes
+    ChallengeResponseAuthentication yes
+    ```
+    - Restart ssh:
+    ```
+    sudo systemctl reload ssh
+    ```
