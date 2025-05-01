@@ -358,3 +358,10 @@ sudo passwd
     ```
     sudo systemctl reload ssh
     ```
+## Open SSH tunnle on the local device to connect to the private RDS or instnace, which is not publically accesible:
+
+```
+ssh -i /path/to/your-key.pem -N -L 5432:<rds-endpoint>:5432 ec2-user@<ec2-public-ip>
+```
+- First port is the local device port where we want to expose our rds. and rest is self explanatory.
+- FYI: For that we need one EC2 instance in the vpc to create bridge / SSH tunnle.
