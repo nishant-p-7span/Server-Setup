@@ -176,6 +176,10 @@ Copy Paste the following commands.
         }
     }
    ```
+- Forward users real ip:
+    ```
+    proxy_set_header X-Real-IP $remote_addr;
+    ```
 - Enter following command to link to the `sites-enable`.
   ```
   sudo ln -s /etc/nginx/sites-available/domain.com /etc/nginx/sites-enabled/
