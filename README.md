@@ -122,6 +122,11 @@ sudo usermod -aG docker $USER
 ```
 newgrp docker
 ```
+- Enable Docker to start on boot:
+```
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+```
 # Now Done, if you make chages to the git repo then automatically trigger the pipeline and deploy it.
 
 # NPM hangs problem on t2.micro.
