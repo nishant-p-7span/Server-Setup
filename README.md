@@ -376,3 +376,9 @@ ssh -i /path/to/your-key.pem -N -L 5432:<rds-endpoint>:5432 ec2-user@<ec2-public
 ```
 - First port is the local device port where we want to expose our rds. and rest is self explanatory.
 - FYI: For that we need one EC2 instance in the vpc to create bridge / SSH tunnle.
+
+## Migrate S3 bucket to another bucket in another account:
+1. Configure AWS CLI with the account have source S3 bucket:
+```aws s3 sync s3://algoseek ./s3```
+2. Now configure CLI with account have destination S3 bucket:
+```aws s3 sync ./s3 s3://algoseek-new```
