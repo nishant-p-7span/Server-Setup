@@ -301,20 +301,25 @@ Copy Paste the following commands.
 - Make you nginx files like this:
 ```
 server {
-listen 443;
-ssl_certificate /etc/ssl/ssl-bundle.crt;
-ssl_certificate_key /path/to/your_private.key;
-root /path/to/webroot;
-server_name your_domain.com;
-}
-access_log /var/log/nginx/nginx.vhost.access.log;
-error_log /var/log/nginx/nginx.vhost.error.log;
-location / {
-root /var/www/;
-root  /home/www/public_html/your.domain.com/public/;
-index index.html;
-}
-}
+        listen 443 ssl;
+        listen [::]:443 ssl ipv6only=on;
+      server_name domain.com;
+        ssl_certificate /etc/ssl/domain.com/ssl-bundle.pem;
+        ssl_certificate_key /etc/ssl/domain.com/private.pem;
+
+      client_max_body_size 100M;
+
+      location / {
+              # try_files $uri $uri/ =404;
+              proxy_pass http://localhost:8056; #whatever port your app runs on
+              proxy_http_version 1.1;
+              proxy_set_header Upgrade $http_upgrade;
+              proxy_set_header Connection 'upgrade';
+              proxy_set_header Host $host;
+              proxy_cache_bypass $http_upgrade;
+      }
+  }
+
 ```
 - Restart nginx: 
 ```
