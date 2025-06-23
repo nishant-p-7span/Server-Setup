@@ -319,7 +319,16 @@ server {
               proxy_cache_bypass $http_upgrade;
       }
   }
+server {
+    if ($host = domain.com) {
+        return 301 https://$host$request_uri;
+    }
+        listen 80;
+        listen [::]:80;
 
+        server_name domain.com;
+    return 404;
+}
 ```
 - Restart nginx: 
 ```
