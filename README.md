@@ -396,3 +396,19 @@ ssh -i /path/to/your-key.pem -N -L 5432:<rds-endpoint>:5432 ec2-user@<ec2-public
 ```aws s3 sync s3://algoseek ./s3```
 2. Now configure CLI with account have destination S3 bucket:
 ```aws s3 sync ./s3 s3://algoseek-new```
+
+## If you pushed code with the other users github the run this command to fix you last commit: (This will only run if commit is just pushed and after that no other commit is made.)
+- Windows:
+```
+$env:GIT_COMMITTER_NAME  = "pruthvi-7span"
+$env:GIT_COMMITTER_EMAIL = "pruthvi@7span.com"
+git commit --amend --no-edit --author="pruthvi-7span <pruthvi@7span.com>"
+git push --force-with-lease
+```
+- Linux:
+```
+export GIT_COMMITTER_NAME="pruthvi-7span"
+export GIT_COMMITTER_EMAIL="pruthvi@7span.com"
+git commit --amend --no-edit --author="pruthvi-7span <pruthvi@7span.com>"
+git push --force-with-lease
+```
