@@ -220,7 +220,7 @@ Copy Paste the following commands.
 
 # Certbot Set up:
 - Original Website docs: https://certbot.eff.org/instructions?ws=nginx&os=snap&tab=standard
-- add repo:
+- add repo (Now not required):
   ```
   sudo add-apt-repository ppa:certbot/certbot
   ```
@@ -230,7 +230,7 @@ Copy Paste the following commands.
   ```
 - install certbot:
   ```
-  sudo apt-get install python3-certbot-nginx
+  sudo apt-get install certbot python3-certbot-nginx
   ```
 - Command to activate SSL.
     ```
